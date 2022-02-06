@@ -1,0 +1,1 @@
+{"mappings":"AAAA,EACE,qBACF,CACA,KAEE,yDAA2C,CAD3C,QAEF","sources":["src/index.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n}\nbody {\n  margin: 0;\n  background-image: url(\"./images/fondo.png\");\n}\n"],"names":[],"version":3,"file":"index.488da79a.css.map"}
