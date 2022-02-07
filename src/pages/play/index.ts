@@ -6,9 +6,14 @@ function addStyle() {
   style.innerHTML = `
   .content {
     display: grid;
-    padding: 115px 26px 0 26px; 
+    padding: 100px 26px 0 26px; 
     height:100vh;
     gap:30px;
+  }
+  @media (min-height: 550px) {
+    .content {
+      padding: 200px 26px 0 26px;
+    }
   }
   
   .content__circle {
@@ -47,7 +52,13 @@ function addStyle() {
     }
   }
   
-  @media (min-width: 769px) {
+  .content__hand{
+    width:75px;
+  }
+  .content__hand--papel {
+    width:92px;
+  }
+  @media (min-width: 480px) {
     .content__hand {
       width: 90px;
     }

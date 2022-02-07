@@ -4,10 +4,16 @@ function addStyle() {
   .content {
     display: grid;
     justify-content: center;
-    padding: 90px 26px 0 26px;
+    padding: 60px 26px 0 26px;
     gap:30px;
     height:100vh;
   }
+  @media (min-height: 550px) {
+    .content {
+      padding: 130px 26px 0 26px;
+    }
+  }
+
   
   .content__title-button {
     max-width: 336px;
@@ -52,7 +58,7 @@ function addStyle() {
   
   .content__cont-hands {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items:flex-end;
   }
   
@@ -64,8 +70,14 @@ function addStyle() {
       gap: 30px;
     }
   }
-  
-  @media (min-width: 769px) {
+
+  .content__hand{
+    width:75px;
+  }
+  .content__hand--papel {
+    width:92px;
+  }
+  @media (min-width: 480px) {
     .content__hand {
       width: 90px;
     }
@@ -107,9 +119,11 @@ export function initPageInstructions(params: any) {
 
   contentEl.appendChild(addStyle());
 
-  contentEl.querySelector("button-custom").addEventListener("click-btn-custom", (e) => {
-    params.goTo("/play");
-  });
+  contentEl
+    .querySelector("button-custom")
+    .addEventListener("click-btn-custom", (e) => {
+      params.goTo("/play");
+    });
   return contentEl;
 }
 

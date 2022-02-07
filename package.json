@@ -13,6 +13,6 @@
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "parcel": "^2.2.1",
-    "typescript": "^4.6.0-dev.20220128"
+    "typescript": "^4.6.0-dev.20220128" 
   }
 }

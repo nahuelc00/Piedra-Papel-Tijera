@@ -8,9 +8,14 @@ function addStyle() {
     gap:30px;
     height:100vh;
   }
-  @media (min-width: 330px) {
+  @media (min-height: 550px) {
     .content {
-      padding: 80px 26px 0 26px;
+      padding: 145px 26px 0 26px;
+    }
+  }
+  @media (min-width: 480px) {
+    .content {
+      padding: 145px 26px 0 26px;
     }
   }
   
@@ -46,7 +51,7 @@ function addStyle() {
   
   .content__cont-hands {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items:flex-end;
   }
   
@@ -59,7 +64,13 @@ function addStyle() {
     }
   }
   
-  @media (min-width: 769px) {
+  .content__hand{
+    width:75px;
+  }
+  .content__hand--papel {
+    width:92px;
+  }
+  @media (min-width: 480px) {
     .content__hand {
       width: 90px;
     }
@@ -106,8 +117,10 @@ export function initPageWelcome(params: any) {
 
   contentEl.appendChild(addStyle());
 
-  contentEl.querySelector("button-custom").addEventListener("click-btn-custom", (e) => {
-    params.goTo("/instructions");
-  });
+  contentEl
+    .querySelector("button-custom")
+    .addEventListener("click-btn-custom", (e) => {
+      params.goTo("/instructions");
+    });
   return contentEl;
 }
